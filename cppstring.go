@@ -7,7 +7,8 @@ type Cppstring struct {
 }
 
 func (cstring *Cppstring) Append(otherString *string) Cppstring {
-	return Cppstring{string(append([]rune(cstring.rawString), []rune(*otherString)...))}
+	cstring.rawString = string(append([]rune(cstring.rawString), []rune(*otherString)...))
+	return *cstring
 }
 
 func (cstring *Cppstring) AppendCppString(otherString *Cppstring) Cppstring {
