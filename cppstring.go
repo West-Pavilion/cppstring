@@ -6,8 +6,8 @@ type Cppstring struct {
 	rawString string
 }
 
-func (cstring *cppstring) Append(otherString *cppstring) cppstring {
-	return cppstring{string(append([]rune(cstring.rawString), []rune(otherString.rawString)...))}
+func (cstring *Cppstring) Append(otherString *Cppstring) Cppstring {
+	return Cppstring{string(append([]rune(cstring.rawString), []rune(otherString.rawString)...))}
 }
 
 func Reverse(raw string) string {
