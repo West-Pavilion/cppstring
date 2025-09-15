@@ -6,7 +6,7 @@ type Cppstring struct {
 	rawString string
 }
 
-func (cstring *cppstring) append(otherString *cppstring) cppstring {
+func (cstring *cppstring) Append(otherString *cppstring) cppstring {
 	return cppstring{string(append([]rune(cstring.rawString), []rune(otherString.rawString)...))}
 }
 
