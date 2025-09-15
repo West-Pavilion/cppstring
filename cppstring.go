@@ -2,7 +2,7 @@ package cppstring
 
 import "github.com/West-Pavilion/cppstring/v2/helpers"
 
-type cppstring struct {
+type Cppstring struct {
 	rawString string
 }
 
