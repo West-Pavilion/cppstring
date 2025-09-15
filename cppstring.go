@@ -12,6 +12,7 @@ func (cstring *Cppstring) Append(otherString *string) Cppstring {
 }
 
 func (cstring *Cppstring) AppendCppString(otherString *Cppstring) Cppstring {
+	cstring.RawString = cstring.Append(&otherString.RawString).RawString
 	return Cppstring{string(append([]rune(cstring.RawString), []rune(otherString.RawString)...))}
 }
 
