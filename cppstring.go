@@ -1,6 +1,6 @@
 package cppstring
 
-import "github.com/West-Pavilion/cppstring/v2/helpers"
+import "github.com/West-Pavilion/cppstring/v3/helpers"
 
 type Cppstring struct {
 	RawString string
