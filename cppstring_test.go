@@ -62,9 +62,16 @@ func TestReverse(t *testing.T) {
 
 func BenchmarkReverse(b *testing.B) {
 	testString := "Hello, 世界! This is a test string with mixed characters 测试字符串 🌍👋"
-	
+
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		Reverse(testString)
 	}
+}
+
+func TestVersion(t *testing.T) {
+	if Version := Version; Version == `` {
+		t.Errorf("Version does not exist")
+	}
+	t.Logf("get Version info successfully: %s", Version)
 }

@@ -5,6 +5,8 @@ package cppstring
 
 import "github.com/West-Pavilion/cppstring/helpers"
 
+var Version = "NoClass"
+
 // Reverse returns a new string with the characters of the input string in reverse order.
 // It properly handles Unicode characters including Chinese characters and emojis.
 func Reverse(raw string) string {
